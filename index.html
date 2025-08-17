@@ -1,32 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Driver on Call by AAYRA</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    :root{
+      --bg:#0e0e0e;        /* page background */
+      --card:#1b1b1b;      /* card background */
+      --gold:#d4af37;      /* accent gold */
+      --text:#ffffff;      /* main text */
+      --muted:#bdbdbd;     /* secondary text */
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg); color:var(--text);
+    }
+    header{
+      text-align:center; padding:28px 16px; background:#000;
+      border-bottom:1px solid var(--gold);
+    }
+    header img{
+      width:84px; height:84px; object-fit:contain; margin-bottom:8px;
+      filter:drop-shadow(0 2px 6px rgba(0,0,0,.5));
+    }
+    header h1{margin:6px 0 4px; font-size:28px; letter-spacing:.5px; color:var(--gold)}
+    header p{margin:0; color:var(--muted)}
+    .container{max-width:900px; margin:0 auto; padding:18px 16px 28px}
+    .card{
+      background:var(--card); border:1px solid var(--gold);
+      border-radius:14px; padding:16px; margin:14px 0;
+      box-shadow:0 6px 16px rgba(0,0,0,.35);
+    }
+    .card h2{margin:0 0 6px; color:var(--gold); font-size:20px}
+    a{color:var(--gold); text-decoration:none}
+    .whatsapp-btn{
+      display:inline-block; margin-top:10px; padding:12px 20px;
+      background:var(--gold); color:#000; font-weight:700; border-radius:999px;
+      box-shadow:0 4px 10px rgba(212,175,55,.35); transition:.2s;
+    }
+    .whatsapp-btn:hover{transform:translateY(-1px)}
+    footer{
+      text-align:center; color:var(--muted); padding:18px 12px; background:#000; border-top:1px solid #1f1f1f;
+    }
+  </style>
 </head>
 <body>
   <header>
+    <!-- Replace logo.png later; this hides the image if it's missing -->
+    <img src="logo.png" alt="AAYRA logo" onerror="this.style.display='none'" />
     <h1>Driver on Call by AAYRA</h1>
     <p>Your trusted driver, anytime anywhere</p>
   </header>
 
-  <main>
-    <section>
+  <main class="container">
+    <section class="card">
       <h2>About Us</h2>
-      <p>We provide professional drivers on call for your travel needs. Safe, reliable, and convenient.</p>
+      <p>We provide professional drivers on call for daily commutes, airport runs, events and outstation trips — safe, reliable and convenient.</p>
     </section>
 
-    <section>
+    <section class="card">
       <h2>Contact Us</h2>
-      <p>📞 Call: +91 9096503330</p>
-      <p>📧 Email: mukeshjadhav05792@gmail.com</p>
+      <p>📞 Call: <a href="tel:+919096503330">+91 9096503330</a></p>
+      <p>✉️ Email: <a href="mailto:mukeshjadhav05792@gmail.com">mukeshjadhav05792@gmail.com</a></p>
+      <a class="whatsapp-btn" href="https://wa.me/919096503330" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Driver on Call by AAYRA. All rights reserved.</p>
-  </footer>
+  <footer>© 2025 Driver on Call by AAYRA. All rights reserved.</footer>
 </body>
 </html>
