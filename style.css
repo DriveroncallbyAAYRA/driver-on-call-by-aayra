@@ -1,116 +1,21 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-  background: #f8f9fa;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #004d40;
-  padding: 15px 30px;
-  color: white;
-}
-
-.navbar .logo {
-  height: 50px;
-  margin-right: 10px;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-
-.navbar nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.navbar nav a:hover,
-.navbar nav a.active {
-  color: #ffca28;
-}
-
-/* Hero */
-.hero {
-  background: url('car-bg.jpg') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  margin-bottom: 20px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 25px;
-  background: #ffca28;
-  color: #333;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #ffc107;
-}
-
-/* Sections */
-.content {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
-
-.features, .service-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  padding: 40px 20px;
+  margin-top: 20px;
 }
-
-.feature-card, .service-card {
-  background: white;
+.service-card {
+  background: #222;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
   transition: 0.3s;
 }
-
-.feature-card:hover, .service-card:hover {
+.service-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
 }
-
-/* Footer */
-footer {
-  background: #004d40;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 20px;
+.service-card h3 {
+  color: #f0c000;
+  margin-bottom: 10px;
 }
