@@ -1,4 +1,4 @@
-/* Reset some default styles */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,90 +6,111 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Body styling */
 body {
-  background: #f9f9f9;
+  background: #f8f9fa;
   color: #333;
   line-height: 1.6;
 }
 
-/* Header / Hero section */
-header {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #004d40;
+  padding: 15px 30px;
   color: white;
-  text-align: center;
-  padding: 60px 20px;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.navbar .logo {
+  height: 50px;
+  margin-right: 10px;
 }
 
-header p {
-  font-size: 1.2rem;
+.logo-container {
+  display: flex;
+  align-items: center;
 }
 
-/* Navigation */
-nav {
-  background: #222;
-  padding: 10px;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  margin: 0 15px;
+.navbar nav a {
+  margin: 0 10px;
   text-decoration: none;
+  color: white;
   font-weight: 500;
+  transition: 0.3s;
 }
 
-nav a:hover {
-  color: #f0a500;
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: #ffca28;
 }
 
-/* Sections */
-section {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+/* Hero */
+.hero {
+  background: url('car-bg.jpg') center/cover no-repeat;
+  color: white;
   text-align: center;
+  padding: 100px 20px;
 }
 
-section p {
-  text-align: center;
-  font-size: 1.1rem;
+.hero h1 {
+  font-size: 2.5rem;
   margin-bottom: 15px;
 }
 
-/* Call to action button */
-.cta {
-  display: block;
-  width: max-content;
-  margin: 20px auto;
-  background: #1e3c72;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: background 0.3s ease;
+.hero p {
+  margin-bottom: 20px;
 }
 
-.cta:hover {
-  background: #2a5298;
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #ffca28;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ffc107;
+}
+
+/* Sections */
+.content {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.features, .service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.feature-card, .service-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 280px;
+  transition: 0.3s;
+}
+
+.feature-card:hover, .service-card:hover {
+  transform: translateY(-5px);
 }
 
 /* Footer */
 footer {
+  background: #004d40;
+  color: white;
   text-align: center;
   padding: 15px;
-  background: #222;
-  color: white;
-  margin-top: 40px;
+  margin-top: 20px;
 }
