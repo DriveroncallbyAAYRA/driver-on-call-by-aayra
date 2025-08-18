@@ -1,138 +1,67 @@
-/* ========= Base ========= */
-:root{
-  --bg:#0b0b0c;
-  --panel:#151517;
-  --text:#e8e8e8;
-  --muted:#b7b7b7;
-  --accent:#f0c000;   /* gold */
-  --accent-2:#ffdb4d; /* lighter gold */
-  --edge:#242424;
-  --green:#25d366;    /* WhatsApp */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
-
-/* ========= Background Logo (watermark) ========= */
-.bg-logo{
-  position: fixed;
-  inset: 0;
-  background: url("IMG-20250813-WA0001.png") center 15% / 60vmin no-repeat;
-  opacity: .06;          /* faint watermark */
-  filter: grayscale(1) contrast(1.1);
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Make page content sit above watermark */
-header, main, footer{ position:relative; z-index: 1; }
-
-/* ========= Top Navigation ========= */
-.topnav{
-  position: sticky; top:0; z-index: 10;
-  background: rgba(11,11,12,.85);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid var(--edge);
-}
-.nav-inner{
-  max-width: 1100px; margin: 0 auto; padding: 10px 16px;
-  display: flex; align-items: center; justify-content: space-between; gap: 16px;
-}
-.brand{ display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--text); }
-.brand img{ height:44px; width:auto; border-radius: 10px }
-.brand h1{ font-size: 18px; margin:0; font-weight:700; letter-spacing:.3px }
-
-.nav-links{ display:flex; gap:18px; flex-wrap: wrap; }
-.nav-links a{
-  color: var(--text); text-decoration:none; font-weight:600; padding:8px 10px; border-radius:10px;
-  transition: .2s ease;
-}
-.nav-links a:hover{ background:#1a1a1d }
-.nav-links a.active{ color:#000; background: var(--accent); }
-
-/* ========= Hero ========= */
-.hero{
-  max-width: 1100px; margin: 0 auto; padding: 56px 16px 28px;
+/* Background for Home */
+.home-page {
+  background: url("IMG-20250813-WA0001.png") no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+  font-family: Arial, sans-serif;
   text-align: center;
 }
-.hero h2{
-  font-size: clamp(26px, 4vw, 44px);
-  margin: 6px 0 10px;
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
 }
-.highlight{
-  background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent));
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-  background-size: 200% 100%;
-  animation: shine 4s linear infinite;
+nav ul li {
+  margin: 0 15px;
 }
-@keyframes shine{
-  0%{ background-position: 0% 50% }
-  100%{ background-position: 200% 50% }
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li a.active {
+  border-bottom: 2px solid yellow;
 }
 
-/* CTA button with glow */
-.btn{
-  display:inline-block; padding:12px 20px; border-radius:12px;
-  font-weight:800; text-decoration:none; color:#000;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  box-shadow: 0 0 0 rgba(240,192,0,0);
-  transition: transform .15s ease, box-shadow .25s ease;
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
 }
-.btn.glow{
-  animation: pulse 2s ease-in-out infinite;
+.hero h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 8px #000;
 }
-@keyframes pulse{
-  0%,100%{ box-shadow: 0 0 0 rgba(240,192,0,0.35) }
-  50%{    box-shadow: 0 0 28px rgba(240,192,0,0.55) }
-}
-.btn:hover{ transform: translateY(-2px) }
-
-/* ========= Generic content ========= */
-main{ max-width: 1100px; margin: 0 auto; padding: 24px 16px 40px }
-.section{ margin: 26px 0 }
-.section h3{ font-size: 24px; margin: 0 0 8px }
-.lead{ color: var(--muted); max-width: 780px; margin-inline: auto }
-
-/* ========= Services Grid ========= */
-.services-grid{
-  display:grid; gap:18px; margin-top:18px;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-}
-.card{
-  background: var(--panel); border: 1px solid var(--edge);
-  border-radius: 16px; padding: 18px;
-  box-shadow: 0 8px 32px rgba(0,0,0,.22);
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-}
-.card:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 12px 36px rgba(0,0,0,.28);
-  border-color: #2d2d2f;
-}
-.card h4{ margin: 6px 0 6px; color: var(--accent) }
-.card p{ color: var(--muted); margin: 0 0 10px }
-.card .mini{ font-size: 13px; color: #9e9e9e }
-
-/* ========= Footer ========= */
-footer{
-  border-top:1px solid var(--edge); background: rgba(11,11,12,.85);
-  padding: 18px 16px; text-align:center; color:var(--muted)
+.hero p {
+  font-size: 1.3rem;
+  margin: 15px 0;
 }
 
-/* ========= Floating WhatsApp ========= */
-.wa-float{
-  position: fixed; right: 18px; bottom: 18px; z-index: 20;
-  width:58px; height:58px; border-radius: 50%;
-  background: var(--green); color:#fff; font-weight:900;
-  display:flex; align-items:center; justify-content:center;
-  text-decoration:none; box-shadow: 0 8px 24px rgba(0,0,0,.35);
-  transition: transform .15s ease, box-shadow .2s ease;
+/* Explore Button with Glow Effect */
+.explore-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  animation: glow 1.5s infinite alternate;
 }
-.wa-float:hover{ transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,.45) }
-.wa-float span{ font-size: 22px; line-height: 1 }
+@keyframes glow {
+  from { box-shadow: 0 0 10px #ffcc00; }
+  to { box-shadow: 0 0 25px #ff9900; }
+}
