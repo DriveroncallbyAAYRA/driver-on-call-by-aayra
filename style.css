@@ -1,67 +1,70 @@
-/* Reset */
-* {
+/* General Reset */
+body, html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  color: white;
 }
 
-/* Background for Home */
-.home-page {
-  background: url("IMG-20250813-WA0001.png") no-repeat center center/cover;
-  height: 100vh;
-  color: white;
-  font-family: Arial, sans-serif;
+/* Navigation Bar */
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+  background: rgba(0,0,0,0.6);
   text-align: center;
 }
 
-/* Navigation */
 nav ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  background: rgba(0,0,0,0.6);
-  padding: 15px;
+  margin: 0;
+  padding: 0;
 }
+
 nav ul li {
+  display: inline-block;
   margin: 0 15px;
 }
+
 nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
-nav ul li a.active {
-  border-bottom: 2px solid yellow;
-}
 
 /* Hero Section */
 .hero {
+  background: url("IMG-20250813-WA0001.png") no-repeat center center/cover;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  height: 80vh;
-}
-.hero h1 {
-  font-size: 3rem;
-  text-shadow: 2px 2px 8px #000;
-}
-.hero p {
-  font-size: 1.3rem;
-  margin: 15px 0;
+  align-items: center;
+  text-align: center;
+  position: relative;
 }
 
-/* Explore Button with Glow Effect */
-.explore-btn {
+.overlay {
+  background: rgba(0,0,0,0.5);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Highlighted Button */
+.btn {
   display: inline-block;
+  margin-top: 15px;
   padding: 12px 25px;
-  background: #ffcc00;
-  color: #000;
-  font-weight: bold;
+  background: #ff4500;
+  color: white;
+  font-size: 18px;
   border-radius: 25px;
   text-decoration: none;
-  animation: glow 1.5s infinite alternate;
+  transition: 0.3s;
 }
-@keyframes glow {
-  from { box-shadow: 0 0 10px #ffcc00; }
-  to { box-shadow: 0 0 25px #ff9900; }
+
+.btn:hover {
+  background: #ff6600;
+  transform: scale(1.1);
 }
