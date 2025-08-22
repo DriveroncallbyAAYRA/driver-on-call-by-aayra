@@ -1,70 +1,76 @@
-/* General Reset */
+/* Reset */
 body, html {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
   height: 100%;
-  color: white;
+  font-family: Arial, sans-serif;
 }
 
-/* Navigation Bar */
+/* Navigation */
 nav {
   position: absolute;
   top: 0;
   width: 100%;
-  padding: 15px;
-  background: rgba(0,0,0,0.6);
-  text-align: center;
+  background: rgba(0,0,0,0.7);
 }
-
 nav ul {
   list-style: none;
+  text-align: center;
+  padding: 15px;
   margin: 0;
-  padding: 0;
 }
-
 nav ul li {
   display: inline-block;
   margin: 0 15px;
 }
-
 nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  padding: 5px 10px;
+}
+nav ul li a.active {
+  border-bottom: 2px solid #ffcc00;
 }
 
-/* Hero Section */
+/* Hero section */
 .hero {
   background: url("IMG-20250813-WA0001.png") no-repeat center center/cover;
   height: 100vh;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: relative;
 }
-
-.overlay {
+.hero .overlay {
   background: rgba(0,0,0,0.5);
-  padding: 30px;
+  padding: 40px;
   border-radius: 10px;
 }
-
-/* Highlighted Button */
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 25px;
-  background: #ff4500;
-  color: white;
-  font-size: 18px;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: 0.3s;
+.hero h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 8px #000;
+}
+.hero p {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin: 15px 0;
 }
 
+/* Explore button */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #ffcc00;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  transition: transform 0.3s, background 0.3s;
+}
 .btn:hover {
-  background: #ff6600;
-  transform: scale(1.1);
+  background: #ffdd55;
+  transform: translateY(-5px);
 }
