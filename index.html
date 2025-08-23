@@ -1,98 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Driver on Call by AAYRA</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver On Call - Chhatrapati Sambhaji Nagar | Your Car, Our Expert Driver</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 0 20px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            color: #f39c12;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 15px 0;
+        }
+
+        header ul {
+            display: flex;
+            list-style: none;
+            padding: 15px 0;
+        }
+
+        header ul li {
+            margin: 0 15px;
+        }
+
+        header ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header ul li a:hover {
+            color: #f39c12;
+        }
+
+        .hero {
+            background: url("IMG-20250813-WA0001.png") no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0,0,0,0.6);
+        }
+
+        .hero-content {
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero h1 span {
+            color: #f39c12;
+        }
+
+        .hero .tagline {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .hero .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #f39c12;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+        }
+
+        .btn:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #f39c12;
+        }
+
+        .btn-secondary:hover {
+            background: #f39c12;
+            border-color: #f39c12;
+        }
+
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #f39c12;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .service-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .service {
+            flex: 1 1 280px;
+            max-width: 350px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s;
+            border-left: 4px solid #f39c12;
+        }
+
+        .service:hover {
+            background: #f39c12;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(243, 156, 18, 0.3);
+        }
+
+        .service h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .stats {
+            background: #f8f9fa;
+            padding: 60px 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #f39c12;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .contact-section {
+            background: #111;
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: #f39c12;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">Driver On Call</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <!-- Navigation -->
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#booking">Booking</a></li>
-        <li><a href="#benefits">Benefits</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <section id="home" class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Your Car. Our <span>Expert</span> Driver.</h1>
+            <p class="tagline">Professional driving service in Chhatrapati Sambhaji Nagar - Safe, Reliable, Available 24/7</p>
+            <div class="cta-buttons">
+                <a href="tel:+91XXXXXXXXXX" class="btn">📞 Call Now</a>
+                <a href="#services" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
 
-  <!-- Home Section -->
-  <section id="home" class="hero">
-    <div class="overlay"></div>
-    <h1>Driver on Call by <span>AAYRA</span></h1>
-    <p>Reliable. Safe. Anytime. Anywhere.</p>
-    <a href="#services" class="btn">Explore Services</a>
-  </section>
+    <section id="about" class="container">
+        <h2 class="section-title">Why Choose Driver On Call?</h2>
+        <p class="section-subtitle">Bringing Bangalore's trusted DriveU concept to Chhatrapati Sambhaji Nagar</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🚗</div>
+                <h3>Your Own Vehicle</h3>
+                <p>Drive in the comfort and safety of your own car. No rental worries, no unfamiliar vehicles - just your trusted ride with our professional driver.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">👨‍💼</div>
+                <h3>Verified Professionals</h3>
+                <p>All our drivers undergo strict background verification, are fully licensed, and have extensive local knowledge of Chhatrapati Sambhaji Nagar.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">⏰</div>
+                <h3>24/7 Availability</h3>
+                <p>Emergency or planned trips - we're available round the clock. Book instantly and get a driver within 15-30 minutes anywhere in the city.</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      We are a trusted driver-on-call service with years of experience in providing professional drivers for families, corporates, and tourists. Our mission is to make travel safe, convenient, and affordable.
-    </p>
-    <ul>
-      <li>✔ Licensed & Verified Drivers</li>
-      <li>✔ Years of Service Excellence</li>
-      <li>✔ Certified & Trained Team</li>
-    </ul>
-  </section>
+    <section class="stats">
+        <div class="container">
+            <h2 class="section-title">Trusted by Thousands</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <div class="stat-label">Service Available</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <div class="stat-label">Expert Drivers</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15 min</span>
+                    <div class="stat-label">Average Response</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Services Section -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="service-list">
-      <div class="service">Tourist Driver</div>
-      <div class="service">Monthly Driver</div>
-      <div class="service">Family Assistance Driver</div>
-      <div class="service">Valet at Home</div>
-      <div class="service">Appeal Driver</div>
-      <div class="service">More on Request</div>
-    </div>
-  </section>
+    <section id="services" class="container">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Perfect for every occasion when you need a professional driver</p>
+        
+        <div class="service-list">
+            <div class="service">
+                <h3>🍻 Safe Nights Out</h3>
+                <p>After parties, weddings, or social gatherings. Your car stays with you - no need to return for it later. Get home safely while we handle the driving.</p>
+            </div>
+            
+            <div class="service">
+                <h3>✈️ Airport Transfers</h3>
+                <p>Comfortable airport pickups and drops in your own vehicle. No waiting for cabs or dealing with parking hassles. Door-to-door convenience.</p>
+            </div>
+            
+            <div class="service">
+                <h3>🏥 Medical Support</h3>
+                <p>When you're unwell or accompanying elderly family members. Hospital visits, medical appointments, and emergency transportation services.</p>
+            </div>
+            
+            <div class="service">
+                <h3>👔 Corporate Services</h3>
+                <p>Business meetings, client entertainment, corporate events. Professional service for your professional needs across Chhatrapati Sambhaji Nagar.</p>
+            </div>
+            
+            <div class="service">
+                <h3>🎉 Special Occasions</h3>
+                <p>Weddings, festivals, family functions. Ensure your special moments are stress-free with reliable transportation in your own vehicle.</p>
+            </div>
+            
+            <div class="service">
+                <h3>🛣️ Outstation Trips</h3>
+                <p>Long-distance travel with your car. Experienced drivers for interstate journeys, weekend getaways, and extended trips.</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- Booking Section -->
-  <section id="booking">
-    <h2>How to Book</h2>
-    <ol>
-      <li>Contact us via phone or WhatsApp</li>
-      <li>Share your trip details</li>
-      <li>Get a driver assigned instantly</li>
-      <li>Enjoy safe and smooth rides</li>
-    </ol>
-    <a href="https://wa.me/919096503330" target="_blank" class="btn">Book on WhatsApp</a>
-  </section>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Book Your Driver Now</h2>
+            <p class="section-subtitle">Available 24/7 across Chhatrapati Sambhaji Nagar</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <h3>Call Instantly</h3>
+                    <p><strong>+91 XXXX-XXXXX</strong></p>
+                    <p>24/7 Helpline</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p><strong>+91 XXXX-XXXXX</strong></p>
+                    <p>Quick Booking & Support</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h3>Service Areas</h3>
+                    <p>CIDCO • Old City • Waluj MIDC<br>
+                    Chikalthana Airport • Railway Station</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">💳</div>
+                    <h3>Easy Payment</h3>
+                    <p>Cash • UPI • Cards<br>
+                    Transparent Pricing</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 40px;">
+                <a href="tel:+91XXXXXXXXXX" class="btn" style="font-size: 1.2rem; padding: 20px 40px;">📞 Book Your Driver Now</a>
+            </div>
+        </div>
+    </section>
 
-  <!-- Benefits Section -->
-  <section id="benefits">
-    <h2>Why Choose Us?</h2>
-    <ul>
-      <li>✔ Transparent Pricing</li>
-      <li>✔ Cash / UPI / Card Payments Accepted</li>
-      <li>✔ 24x7 Customer Support & SOS</li>
-      <li>✔ Ratings & Reviews from Happy Customers</li>
-      <li>✔ Real-time Tracking & Safety Protocols</li>
-    </ul>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Phone:</strong> <a href="tel:+919096503330">9096503330</a></p>
-    <p><strong>Email:</strong> <a href="mailto:mukeshjadhav05792@gmail.com">mukeshjadhav05792@gmail.com</a></p>
-    <p><strong>WhatsApp:</strong> <a href="https://wa.me/919096503330" target="_blank">Chat with us</a></p>
-    <p><strong>Address:</strong> Aurangabad, Maharashtra</p>
-    <p><strong>Hours:</strong> 24/7 Available</p>
-  </section>
-
-  <footer>
-    <p>© 2025 Driver on Call by AAYRA. All Rights Reserved.</p>
-  </footer>
-
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Driver On Call - Chhatrapati Sambhaji Nagar. Your trusted partner for safe, reliable driving services.</p>
+        </div>
+    </footer>
 </body>
 </html>
