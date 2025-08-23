@@ -1,147 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Driver On Call by AAYRA</title>
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- AOS (Animate On Scroll) CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driver on Call by AAYRA</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Sticky Navigation -->
-  <nav id="topnav">
-    <ul>
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- HOME -->
-  <section id="home" class="hero" data-aos="fade-in">
-    <div class="overlay">
-      <h1 data-aos="zoom-in">Driver On Call by AAYRA</h1>
-      <p data-aos="fade-up">Your trusted drivers anytime, anywhere</p>
-      <a href="#services" class="btn glow" data-aos="flip-up">🚗 Explore Services</a>
-    </div>
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="overlay"></div>
+    <h1>Driver on Call by <span>AAYRA</span></h1>
+    <p>Reliable. Safe. Anytime. Anywhere.</p>
+    <a href="#services" class="btn">Explore Services</a>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="content" data-aos="fade-up">
-    <h2>Our Services</h2>
-    <p class="intro">Professional drivers for all your needs:</p>
-    <div class="grid">
-      <div class="card" data-aos="fade-right">
-        <h3>Tourist Driver</h3>
-        <p>City tours & sightseeing with local-expert drivers.</p>
-      </div>
-      <div class="card" data-aos="fade-left">
-        <h3>Monthly Driver</h3>
-        <p>Dedicated driver for daily commutes & family use.</p>
-      </div>
-      <div class="card" data-aos="fade-right">
-        <h3>Family Assistance Driver</h3>
-        <p>School runs, hospital visits, elder care support.</p>
-      </div>
-      <div class="card" data-aos="fade-left">
-        <h3>Valet at Home</h3>
-        <p>Private events & weddings—professional valet team.</p>
-      </div>
-      <div class="card" data-aos="fade-right">
-        <h3>Airport Pickup & Drop</h3>
-        <p>Punctual transfers with flight-aware coordination.</p>
-      </div>
-      <div class="card" data-aos="fade-left">
-        <h3>Corporate Drivers</h3>
-        <p>For executives, events, and multi-car needs.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="content alt" data-aos="fade-up">
+  <!-- About Section -->
+  <section id="about">
     <h2>About Us</h2>
-    <p class="intro">
-      AAYRA Ventures brings you <strong>Driver On Call</strong>—reliable, verified drivers for
-      daily office travel, outstation trips, family functions, and events. We focus on
-      safety, punctuality, and customer-first support—24×7.
+    <p>
+      We are a trusted driver-on-call service with years of experience in providing professional drivers for families, corporates, and tourists. Our mission is to make travel safe, convenient, and affordable.
     </p>
-    <div class="grid">
-      <div class="card" data-aos="zoom-in">
-        <h3>Safety First</h3>
-        <p>Verified drivers trained on etiquette & safe driving.</p>
-      </div>
-      <div class="card" data-aos="zoom-in">
-        <h3>Reliability</h3>
-        <p>On-time pickups, clear communication, transparent pricing.</p>
-      </div>
-      <div class="card" data-aos="zoom-in">
-        <h3>Comfort</h3>
-        <p>Polite drivers and smooth rides tailored to your schedule.</p>
-      </div>
+    <ul>
+      <li>✔ Licensed & Verified Drivers</li>
+      <li>✔ Years of Service Excellence</li>
+      <li>✔ Certified & Trained Team</li>
+    </ul>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="service-list">
+      <div class="service">Tourist Driver</div>
+      <div class="service">Monthly Driver</div>
+      <div class="service">Family Assistance Driver</div>
+      <div class="service">Valet at Home</div>
+      <div class="service">Appeal Driver</div>
+      <div class="service">More on Request</div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="content" data-aos="fade-up">
-    <h2>Contact</h2>
-    <p class="intro">Fastest way to book: WhatsApp or Call</p>
-    <div class="grid">
-      <div class="card" data-aos="fade-right">
-        <h3>WhatsApp</h3>
-        <p>Instant chat for bookings & queries.</p>
-        <p><a class="btn" href="https://wa.me/919096503330?text=Hi%2C%20I%20want%20to%20book%20a%20driver">Chat on WhatsApp</a></p>
-      </div>
-      <div class="card" data-aos="fade-up">
-        <h3>Call</h3>
-        <p><a class="btn" href="tel:+919096503330">Call: 9096503330</a></p>
-      </div>
-      <div class="card" data-aos="fade-left">
-        <h3>Email</h3>
-        <p><a class="btn" href="mailto:itsHome001@gmail.com">itsHome001@gmail.com</a></p>
-      </div>
-    </div>
+  <!-- Booking Section -->
+  <section id="booking">
+    <h2>How to Book</h2>
+    <ol>
+      <li>Contact us via phone or WhatsApp</li>
+      <li>Share your trip details</li>
+      <li>Get a driver assigned instantly</li>
+      <li>Enjoy safe and smooth rides</li>
+    </ol>
+    <a href="https://wa.me/919096503330" target="_blank" class="btn">Book on WhatsApp</a>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits">
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>✔ Transparent Pricing</li>
+      <li>✔ Cash / UPI / Card Payments Accepted</li>
+      <li>✔ 24x7 Customer Support & SOS</li>
+      <li>✔ Ratings & Reviews from Happy Customers</li>
+      <li>✔ Real-time Tracking & Safety Protocols</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> <a href="tel:+919096503330">9096503330</a></p>
+    <p><strong>Email:</strong> <a href="mailto:mukeshjadhav05792@gmail.com">mukeshjadhav05792@gmail.com</a></p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/919096503330" target="_blank">Chat with us</a></p>
+    <p><strong>Address:</strong> Aurangabad, Maharashtra</p>
+    <p><strong>Hours:</strong> 24/7 Available</p>
   </section>
 
   <footer>
-    © 2025 Driver On Call by AAYRA
+    <p>© 2025 Driver on Call by AAYRA. All Rights Reserved.</p>
   </footer>
 
-  <!-- Floating WhatsApp -->
-  <a class="wa-float" href="https://wa.me/919096503330?text=Hi%2C%20I%20want%20to%20book%20a%20driver" aria-label="Chat on WhatsApp">WA</a>
-
-  <!-- AOS JS & Init -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init({ duration: 900, once: true });</script>
-
-  <!-- Scroll-Spy: highlights current menu item while scrolling -->
-  <script>
-    const sections = document.querySelectorAll('section[id]');
-    const links = document.querySelectorAll('nav a');
-
-    const spy = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const id = entry.target.getAttribute('id');
-        const link = document.querySelector('nav a[href="#' + id + '"]');
-        if (entry.isIntersecting) {
-          links.forEach(a => a.classList.remove('active'));
-          if (link) link.classList.add('active');
-        }
-      });
-    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0.01 });
-
-    sections.forEach(sec => spy.observe(sec));
-
-    // Close the “hash jump under nav” gap on direct link
-    if (location.hash) {
-      setTimeout(()=>document.querySelector(location.hash)?.scrollIntoView({behavior:'smooth'}), 10);
-    }
-  </script>
 </body>
 </html>
